@@ -1,0 +1,39 @@
+package com.incidencia.models;
+
+public class Equipo {
+	int idEquipo;
+	String marca;
+	String modelo;
+
+	public Equipo(int idEquipo, String marca, String modelo) {
+		super();
+		this.idEquipo = idEquipo;
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+
+	public int getIdEquipo() {
+		return idEquipo;
+	}
+
+	public void setIdEquipo(int idEquipo) {
+		this.idEquipo = idEquipo;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+}

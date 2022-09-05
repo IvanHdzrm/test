@@ -1,0 +1,5 @@
+package com.incidencia.repositories;
+
+public interface IncidenciaRepository {
+
+}

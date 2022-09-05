@@ -1,0 +1,46 @@
+package com.incidencia.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.incidencia.entities.Equipo;
+import com.incidencia.repositories.IEquipoRepository;
+
+import interfaces.IGeneralCrud;
+
+@Service
+public class EquipoService implements IGeneralCrud<Equipo> {
+
+	@Autowired
+	IEquipoRepository equipoRepository;
+
+	@Override
+	public Equipo obtenerPorId(Long id) {
+		
+		Optional<Equipo> Oequipo = this.equipoRepository.findById(id);
+		
+		if (Oequipo.isEmpty()) {
+			Equipo equipo = Oequipo.get();
+			return equipo;
+
+		}
+		return null;
+
+	}
+
+	@Override
+	public Equipo crear(Equipo entidad) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Equipo> obtenerTodos() {
+		List<Equipo> equipos = this.equipoRepository.findAll();
+		return equipos;
+	}
+
+}

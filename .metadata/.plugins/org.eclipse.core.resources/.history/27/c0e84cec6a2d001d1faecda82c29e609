@@ -1,0 +1,32 @@
+package com.incidencia.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.incidencia.entities.Operador;
+
+import interfaces.IGeneralCrud;
+
+@Service
+public class OperadorService implements IGeneralCrud<Operador> {
+
+	@Override
+	public Operador obtenerPorId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Operador crear(Operador entidad) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Operador> obtenerTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

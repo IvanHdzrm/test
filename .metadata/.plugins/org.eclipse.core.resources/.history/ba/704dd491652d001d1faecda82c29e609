@@ -1,0 +1,5 @@
+package com.incidencia.models;
+
+public class Incidencia {
+
+}

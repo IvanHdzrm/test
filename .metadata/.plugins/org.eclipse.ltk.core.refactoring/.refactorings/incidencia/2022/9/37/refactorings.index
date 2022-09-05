@@ -1,0 +1,6 @@
+1662415315574	Rename package 'com.incidencia.models'
+1662416160332	Rename package 'com.incidencia.daos'
+1662416450670	Rename type 'EquipoRepository'
+1662416473583	Rename type 'IncidenciaRepository'
+1662416486803	Rename type 'OperadorRepository'
+1662420143822	Move compilation unit

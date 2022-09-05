@@ -1,0 +1,55 @@
+package com.incidencia.models;
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "incidencia")
+public class Incidencia {
+
+	Long idIncidencia;
+	String fecha;
+	String status;
+
+	Operador operador;
+
+	Equipo equipo;
+
+	public Incidencia(Long idIncidencia, String fecha, String status, Operador operador, Equipo equipo) {
+		super();
+		this.idIncidencia = idIncidencia;
+		this.fecha = fecha;
+		this.status = status;
+		this.operador = operador;
+		this.equipo = equipo;
+	}
+
+	public Incidencia() {
+
+	}
+
+	public Long getIdIncidencia() {
+		return idIncidencia;
+	}
+
+	public void setIdIncidencia(Long idIncidencia) {
+		this.idIncidencia = idIncidencia;
+	}
+
+	public String getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+}

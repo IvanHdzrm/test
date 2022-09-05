@@ -1,0 +1,7 @@
+spring.datasource.url = jdbc:mysql://localhost/db_incidencias
+spring.datasource.username = root
+spring.datasource.password = Pasww0rd
+spring.jpa.hibernate.ddl-auto= update
+
+
+

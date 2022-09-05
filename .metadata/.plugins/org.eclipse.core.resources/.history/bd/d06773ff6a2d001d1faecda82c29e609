@@ -1,0 +1,35 @@
+package com.incidencia.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.incidencia.entities.Incidencia;
+
+import interfaces.IGeneralCrud;
+
+@Service
+
+public class IncidenciaService implements IGeneralCrud<Incidencia> {
+	
+	
+
+	@Override
+	public Incidencia obtenerPorId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Incidencia crear(Incidencia entidad) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Incidencia> obtenerTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

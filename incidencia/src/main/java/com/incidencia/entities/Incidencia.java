@@ -1,0 +1,78 @@
+package com.incidencia.entities;
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "incidencia")
+public class Incidencia implements Serializable {
+
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idIncidencia")
+	Long idIncidencia;
+	
+	@Column(name = "fecha")
+	String fecha;
+	@Column(name = "status")
+	String status;
+
+	@Column(name = "idOperador")
+	@ManyToOne( fetch = FetchType.LAZY)
+	@JoinColumn(name = "idOperador")
+	Operador operador;
+
+	@Column(name = "idEquipo")
+	@ManyToOne( fetch = FetchType.LAZY)
+	@JoinColumn(name = "idEquipo")
+	Equipo equipo;
+
+	public Incidencia(Long idIncidencia, String fecha, String status, Operador operador, Equipo equipo) {
+		super();
+		this.idIncidencia = idIncidencia;
+		this.fecha = fecha;
+		this.status = status;
+		this.operador = operador;
+		this.equipo = equipo;
+	}
+
+	public Incidencia() {
+
+	}
+
+	public Long getIdIncidencia() {
+		return idIncidencia;
+	}
+
+	public void setIdIncidencia(Long idIncidencia) {
+		this.idIncidencia = idIncidencia;
+	}
+
+	public String getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+}

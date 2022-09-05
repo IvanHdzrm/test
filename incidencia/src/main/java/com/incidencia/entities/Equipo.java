@@ -1,0 +1,62 @@
+package com.incidencia.entities;
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "equipo")
+public class Equipo implements Serializable {
+	
+
+	private static final long serialVersionUID = 1L;
+	@Id
+	@Column(name = "idEquipo")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	Long idEquipo;
+	@Column(name = "marca")
+	String marca;
+	@Column(name = "modelo")
+	String modelo;
+
+
+	public Equipo(Long idEquipo, String marca, String modelo) {
+		super();
+		this.idEquipo = idEquipo;
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+	
+	public Equipo () {
+		
+	}
+
+	public Long getIdEquipo() {
+		return idEquipo;
+	}
+
+	public void setIdEquipo(Long idEquipo) {
+		this.idEquipo = idEquipo;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.incidencia.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import interfaces.IGeneralCrud;
+
+@Service
+public class EquipoService implements IGeneralCrud<Equipo>  {
+
+	@Override
+	public T obtenerPorId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T crear(T entidad) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<T> obtenerTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

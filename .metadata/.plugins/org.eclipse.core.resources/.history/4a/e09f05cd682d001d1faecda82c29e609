@@ -1,0 +1,9 @@
+package com.incidencia.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.incidencia.entities.Operador;
+
+public interface OperadorRepository extends JpaRepository<Operador, Long> {
+
+}
